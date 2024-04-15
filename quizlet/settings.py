@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-ja418nqbpqswu%%#v@*(y^bgl^7u!95b@y7=y#=ca=3j$kssr6
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-# CSRF_TRUSTED_ORIGINS = ['https://librarymanagement-ks4r.onrender.com','https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://final-exem-quizlet.onrender.com','https://*.127.0.0.1']
 
 
 
