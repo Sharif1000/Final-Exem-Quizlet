@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="my-10 py-3 px-4 bg-white rounded-xl shadow-md">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Quiz Title</th>
+        <th scope="col">Date</th>
+        <th scope="col">Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%for list in lists %}
+        <tr>
+          <td>{{list.id}}</td>
+          <td>{{list.quiz.title}}</td>
+          <td>{{list.start_time}}</td>
+          <td>{{list.score}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

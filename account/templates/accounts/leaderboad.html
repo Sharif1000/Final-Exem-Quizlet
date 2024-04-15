@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="my-10 py-3 px-4 bg-white rounded-xl shadow-md">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Position</th>
+        <th scope="col">Username</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Quiz Title</th>
+        <th scope="col">Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for index, attempt in enumerated_lists %}
+        <tr>
+          <td>{{index}}</td>
+          <td>{{attempt.user.user.username}}</td>
+          <td>{{attempt.user.user.first_name}}</td>
+          <td>{{attempt.user.user.last_name}}</td>
+          <td>{{attempt.user.user.email}}</td>
+          <td>{{attempt.quiz.title}}</td>
+          <td>{{attempt.score}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
